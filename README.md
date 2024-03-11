@@ -13,7 +13,7 @@ It filters and cross entries returning from both "long-animation-frame" and "lon
 
 ## Instructions:
 
-### Edit the settings: (Optional)
+### Edit the settings:
 1. Update the `usePrompts` variable to `false` to disable prompts and use pre-defined settings.
 2. Modify the `groupASearchList` and `groupBSearchList` arrays to specify keywords for each group.
    * **Important Note - Leaving groupA empty will include all entries into group A without filtering.**
