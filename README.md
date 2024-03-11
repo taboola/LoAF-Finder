@@ -1,7 +1,7 @@
 # LoAF - Finder
 ## Description
 This script helps you analyze Long Animation Frame (LoAF) entries to identify performance bottlenecks in your web application.
-It filters and cross entries returning from both "long-animation-frame" and "longtask" using keywords you provide. The data is also categorizes into groups for comparison.
+It filters and cross entries returning from both "long-animation-frame" and "longtask" PerformanceObserver using keywords you provide. The data is also categorizes into groups for comparison.
 
 #### Google's Long Animation Frame (LoAF) API: https://developer.chrome.com/docs/web-platform/long-animation-frames
 
