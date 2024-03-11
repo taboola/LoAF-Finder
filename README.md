@@ -1,7 +1,8 @@
 # LoAF - Finder
 ## Description
 This script helps you analyze Long Animation Frame (LoAF) entries to identify performance bottlenecks in your web application.
-It filters and cross entries returning from both "long-animation-frame" and "longtask" PerformanceObserver using keywords you provide. The data is also categorizes into groups for comparison.
+It filters and cross entries returning from both "long-animation-frame" and "longtask" PerformanceObserver based on keywords you provide.
+The data is also categorizes into groups for comparison and is available for download as a CSV file.
 
 #### Google's Long Animation Frame (LoAF) API: https://developer.chrome.com/docs/web-platform/long-animation-frames
 
@@ -12,36 +13,35 @@ It filters and cross entries returning from both "long-animation-frame" and "lon
 - Generates downloadable CSV reports for further analysis.
 
 ## Instructions:
+This script helps you finds relevant long animation frame entries by looking for keywords you specify in the scripts data returning from the loAF API.
 
 ### Edit the settings:
-1. Update the `usePrompts` variable to `false` to disable prompts and use pre-defined settings.
-2. Modify the `groupASearchList` and `groupBSearchList` arrays to specify keywords for each group.
+1. Set `promptDownloadsMessage` to `false` to disable controlling the downloads using prompts.
+2. Enter keywords to the `groupASearchList` and `groupBSearchList` arrays.
    * **Important Note - Leaving groupA empty will include all entries into group A without filtering.**
-3. Adjust the `keysToIgnoreInReports` array to exclude specific fields from reports.
+   * **You can still use groupBSearchList to filter entries into group B.**
+3. Set `shouldDownloadMainReport` to true to download the main report.
+4. Set `shouldDownloadAllOtherReports` to true to download all other reports.
+5. Adjust the `keysToIgnoreInReports` array to exclude specific fields from reports.
 
 ### Run the script:
 Run the script in your devTools console or as a snippet in the source tab.
-If `usePrompts` is true, you'll be prompted to enter keywords for each group.
 
 ### View the results:
-The script will console all data processed and filtered in the devTools console.
+The script will console the results in the devTools console.
 
 ### Download reports: (Optional)
 You'll be prompted to download reports containing detailed data for each group.
+* You can choose to disable this prompt by setting `promptDownloadsMessage` to `false`.
+* You can also control what reports to downloads by setting the `shouldDownloadMainReport` and `shouldDownloadAllOtherReports` settings.
+* you can also download the reports later by running the `downloadReports` function in the console.
+* 
 
-### Example Usage (with prompts):
-1. Run the script in the devTools console or as a snippet.
-2. Enter keywords for Group A separated by spaces (e.g., "scriptA.js functionA my.domainA.com").
-3. Enter keywords for Group B (e.g., "scriptB.js functionB my.domainB.com").
-4. Choose if to download reports (you can also download them later).
-5. Open devTools console to view the results.
-
-### Example Usage (without prompts):
-1. Set `usePrompts` to false in the settings.
-2. Update `groupASearchList` and `groupBSearchList` arrays with keywords.
-3. Run the script in your browser's developer tools console or as a snippet.
-4. Choose if to download reports (you can also download them later).
-5. Open devTools console to view the results.
+### Example Usage:
+1. Update `groupASearchList` and `groupBSearchList` arrays with keywords.
+2. Run the script in your browser's developer tools console or as a snippet.
+3. Choose if to download reports.
+4. Open devTools console to view the results.
 
 #### Note:
 This script relies on the browser's PerformanceObserver API for long-animation-frame and will not work in all environments.
