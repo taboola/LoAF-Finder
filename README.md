@@ -9,8 +9,8 @@ The data is also categorizes into groups for comparison and is available for dow
 - https://github.com/w3c/long-animation-frames 
 
 ## Features:
-- Filters LoAF data based on script names, URLs, or function names.
-- Groups data into two groups (A & B) for easy comparison.
+- Filters data returning from the "long-animation-frame" API based on your setttings.
+- Groups data from different scripts into two groups (A & B) according to your settings for easy comparison.
 - Provides detailed summaries of relevant LoAF data, including blocking duration, execution time, and script details.
 - Generates downloadable CSV reports for further analysis.
 
