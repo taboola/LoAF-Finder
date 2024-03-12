@@ -1,7 +1,7 @@
 # LoAF - Finder
 ## Description
 This script helps you analyze Long Animation Frame (LoAF) entries to identify performance bottlenecks in your web application.
-It filters and cross entries returning from both "long-animation-frame" and "longtask" PerformanceObserver based on keywords you provide.
+It filters and cross entries returning from both "long-animation-frame" and "longtask" PerformanceObserver based on keywords you provide. 
 The data is also categorizes into groups for comparison and is available for download as a CSV file.
 
 #### Google's Long Animation Frame (LoAF) API: https://developer.chrome.com/docs/web-platform/long-animation-frames
@@ -23,6 +23,7 @@ This script helps you finds relevant long animation frame entries by looking for
 3. Set `shouldDownloadMainReport` to true to download the main report.
 4. Set `shouldDownloadAllOtherReports` to true to download all other reports.
 5. Adjust the `keysToIgnoreInReports` array to exclude specific fields from reports.
+6. Set `inTesting` to true when running project's unit tests.
 
 ### Run the script:
 Run the script in your devTools console or as a snippet in the source tab.
