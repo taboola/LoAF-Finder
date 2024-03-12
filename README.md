@@ -1,7 +1,7 @@
 # LoAF - Finder
 ## Description
-This script helps you analyze Long Animation Frame (LoAF) entries to identify performance bottlenecks in your web application.
-It filters and cross entries returning from both "long-animation-frame" and "longtask" PerformanceObserver based on keywords you provide. 
+This script helps you analyze Long Animation Frame (LoAF) data to identify performance bottlenecks in your web application.
+It filters and cross data returning from both "long-animation-frame" and "longtask" PerformanceObserver based on keywords you provide. 
 The data is also categorizes into groups for comparison and is available for download as a CSV file.
 
 #### Google's Long Animation Frame (LoAF) API: 
@@ -9,19 +9,19 @@ The data is also categorizes into groups for comparison and is available for dow
 - https://github.com/w3c/long-animation-frames 
 
 ## Features:
-- Filters LoAF entries based on script names, URLs, or function names.
-- Groups entries into two groups (A & B) for easy comparison.
-- Provides detailed summaries of relevant LoAF entries, including blocking duration, execution time, and script details.
+- Filters LoAF data based on script names, URLs, or function names.
+- Groups data into two groups (A & B) for easy comparison.
+- Provides detailed summaries of relevant LoAF data, including blocking duration, execution time, and script details.
 - Generates downloadable CSV reports for further analysis.
 
 ## Instructions:
-This script helps you finds relevant long animation frame entries by looking for keywords you specify in the scripts data returning from the loAF API.
+This script helps you finds relevant long animation frame data by looking for keywords you specify in the scripts data returning from the loAF API.
 
 ### Edit the settings:
 1. Set `promptDownloadsMessage` to `false` to disable controlling the downloads using prompts.
 2. Enter keywords to the `groupASearchList` and `groupBSearchList` arrays.
-   * **Important Note - Leaving groupA empty will include all entries into group A without filtering.**
-   * **You can still use groupBSearchList to filter entries into group B.**
+   * **Important Note - Leaving groupA empty will include all data into group A without filtering.**
+   * **You can still use groupBSearchList to filter data into group B.**
 3. Set `shouldDownloadMainReport` to true to download the main report.
 4. Set `shouldDownloadAllOtherReports` to true to download all other reports.
 5. Adjust the `keysToIgnoreInReports` array to exclude specific fields from reports.
