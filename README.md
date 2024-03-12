@@ -4,7 +4,9 @@ This script helps you analyze Long Animation Frame (LoAF) entries to identify pe
 It filters and cross entries returning from both "long-animation-frame" and "longtask" PerformanceObserver based on keywords you provide. 
 The data is also categorizes into groups for comparison and is available for download as a CSV file.
 
-#### Google's Long Animation Frame (LoAF) API: https://developer.chrome.com/docs/web-platform/long-animation-frames
+#### Google's Long Animation Frame (LoAF) API: 
+https://developer.chrome.com/docs/web-platform/long-animation-frames
+https://github.com/w3c/long-animation-frames
 
 ## Features:
 - Filters LoAF entries based on script names, URLs, or function names.
