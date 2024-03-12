@@ -11,7 +11,7 @@ The data is also categorizes into groups for comparison and is available for dow
 ## Features:
 - Filters data returning from the "long-animation-frame" API based on your setttings.
 - Groups data from different scripts into two groups (A & B) according to your settings for easy comparison.
-- Provides detailed summaries of relevant LoAF data, including blocking duration, execution time, and script details.
+- Provides detailed summaries of both relevant LoAF and scripts data, including blocking duration.
 - Generates downloadable CSV reports for further analysis.
 
 ## Instructions:
