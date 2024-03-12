@@ -18,14 +18,40 @@ The data is also categorizes into groups for comparison and is available for dow
 This script helps you finds relevant long animation frame data by looking for keywords you specify in the scripts data returning from the loAF API.
 
 ### Edit the settings:
-1. Set `promptDownloadsMessage` to `false` to disable controlling the downloads using prompts.
-2. Enter keywords to the `groupASearchList` and `groupBSearchList` arrays.
-   * **Important Note - Leaving groupA empty will include all data into group A without filtering.**
-   * **You can still use groupBSearchList to filter data into group B.**
-3. Set `shouldDownloadMainReport` to true to download the main report.
-4. Set `shouldDownloadAllOtherReports` to true to download all other reports.
-5. Adjust the `keysToIgnoreInReports` array to exclude specific fields from reports.
-6. Set `inTesting` to true when running project's unit tests.
+1. promptDownloadsMessage:
+- Type: boolean
+- Controls whether the system prompts the user with messages about downloads.
+- Setting to false disables these prompts.
+  
+2. groupASearchList and groupBSearchList:
+- Type: arrays of strings (keywords)
+- Used for filtering data into different groups.
+- If groupASearchList is empty, all data is included in Group A without filtering.
+- groupBSearchList can still be used to filter data into Group B, even with an empty groupASearchList.
+  
+3. shouldDownloadMainReport:
+- Type: boolean
+- Determines whether the main report is downloaded.
+- Set to true to enable downloading.
+  
+4. shouldDownloadAllOtherReports:
+- Type: boolean
+- Controls whether all reports other than the main report are downloaded.
+- Set to true to download them.
+  
+5. keysToIgnoreInReports:
+- Type: array of strings (field names)
+- Specifies fields to exclude from generated reports.
+
+6. inTesting:
+- Type: boolean
+- Indicates whether unit tests are being run.
+- Set to true for test environments.
+
+Key Points:
+- Adjust settings based on your specific requirements for downloads, filtering, and report generation.
+- Empty groupASearchList includes all data in Group A, allowing separate filtering for Group B.
+- Use keysToIgnoreInReports to customize report content.
 
 ### Run the script:
 Run the script in your devTools console or as a snippet in the source tab.
