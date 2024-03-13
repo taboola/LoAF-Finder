@@ -62,8 +62,6 @@ More information or devTools snippets can be found here: https://developer.chrom
 
 ### View the results:
 The script will print the results in the devTools console.
-- Example:
-![image](https://github.com/BarakKalfa/LoAF-finder/assets/142159033/8b132d3e-b377-4c80-904f-819640bb7bec)
 
 ### Download reports: (Optional)
 You'll be prompted to download reports containing detailed data for each group.
