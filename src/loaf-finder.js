@@ -116,7 +116,7 @@ function processScripts(loaf, rawScripts) {
     let scriptCounter = 1;
 
     rawScripts.forEach((rawScript) => {
-        if (!rawScript.sourceLocation) {
+        if (!rawScript.sourceURL) {
             return;
         }
         const script = {};
@@ -137,11 +137,9 @@ function processScripts(loaf, rawScripts) {
         script.invoker = rawScript.invoker;
         script.executionStart = rawScript.executionStart;
         script.forcedStyleAndLayoutDuration = rawScript.forcedStyleAndLayoutDuration;
-        script.navigationId = rawScript.navigationId;
         script.pauseDuration = rawScript.pauseDuration;
         script.longTaskId = 'No Long Task';
-        script.sourceLocation = rawScript.sourceLocation;
-        script.sourceURL = rawScript.sourceURL || rawScript.sourceLocation;
+        script.sourceURL = rawScript.sourceURL;
         script.sourceFunctionName = rawScript.sourceFunctionName;
         script.sourceCharPosition = rawScript.sourceCharPosition;
         script.windowAttribution = rawScript.windowAttribution;
@@ -274,7 +272,7 @@ function addScriptToGroup(scriptType, script) {
 //This function checks if the script is in the group by matching the search strings with the relevant script fields:
 function isScriptInGroup(searchInputList, script) {
     let isInGroup = false
-    const fields = ['sourceFunctionName', 'sourceURL', 'sourceLocation'];
+    const fields = ['sourceFunctionName', 'sourceURL'];
     let concatenatedFieldsValues = '';
     for (const field of fields) {
         concatenatedFieldsValues += script[field] ? `${script[field]} ` : '';
